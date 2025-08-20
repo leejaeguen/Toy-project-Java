@@ -1,6 +1,10 @@
 package com.worms.stockSimulation.stock.aggregate;
 
-public class Stock {
+import java.io.Serializable;
+
+public class Stock implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String stockName;
     private int stockPrice;
     private int minStockPrice;

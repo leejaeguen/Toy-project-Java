@@ -5,11 +5,11 @@ import com.worms.stockSimulation.stock.aggregate.Stock;
 import java.io.*;
 import java.util.ArrayList;
 
-public class stockRepository {
+public class StockRepository {
     private final ArrayList<Stock> stockList = new ArrayList<>();
     private File file = new File("stock/src/main/java/com/worms/stockSimulation/stock/db/stock.txt");
 
-    public stockRepository() {
+    public StockRepository() {
         if (!file.exists()) {
             ArrayList<Stock> defaultStockList = new ArrayList<>();
             defaultStockList.add(new Stock("NVDA", 240000, 240000, 240000 ));
