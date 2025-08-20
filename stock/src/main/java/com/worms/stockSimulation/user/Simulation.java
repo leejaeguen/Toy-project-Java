@@ -1,14 +1,14 @@
 package com.worms.stockSimulation.user;
 
-import com.worms.stockSimulation.stock.service.stockService;
-import com.worms.stockSimulation.user.service.userService;
+import com.worms.stockSimulation.stock.service.StockService;
+import com.worms.stockSimulation.user.service.UserService;
 
 import java.util.Scanner;
 
 public class Simulation {
 
-    private static final userService us = new userService();
-    private static final stockService st = new stockService();
+    private static final UserService us = new UserService();
+    private static final StockService st = new StockService();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -26,12 +26,14 @@ public class Simulation {
             int choice = sc.nextInt();
 
             switch (choice) {
-                case 1: break;
+                case 1: us.findAllUsers();break;
                 case 2: break;
                 case 3: break;
                 case 4: break;
                 case 5: break;
-                case 9: break;
+                case 9:
+                    System.out.println("프로그램을 종료하겠습니다!");
+                    return;
                 default:
                     System.out.println("번호를 잘못 입력하셨습니다.");
             }

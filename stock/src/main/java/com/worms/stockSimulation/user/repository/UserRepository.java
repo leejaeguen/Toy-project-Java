@@ -5,12 +5,12 @@ import com.worms.stockSimulation.user.aggregate.User;
 import java.io.*;
 import java.util.ArrayList;
 
-public class userRepository {
+public class UserRepository {
 
     private final ArrayList<User> userList = new ArrayList<>();
-    private File file = new File("stock/src/main/java/com/worms/stockSimulation/user/db/user.txt");
+    private final File file = new File("stock/src/main/java/com/worms/stockSimulation/user/db/user.txt");
 
-    public userRepository() {
+    public UserRepository() {
         if (!file.exists()) {
             ArrayList<User> defaultUsers = new ArrayList<>();
             defaultUsers.add(new User("user01", 100000000, new ArrayList<>(), new ArrayList<>()));
@@ -58,5 +58,13 @@ public class userRepository {
         } catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public ArrayList<User> findAllUsers() {
+        ArrayList<User> returnUserList = new ArrayList<>();
+        for(User user : userList){
+            returnUserList.add(user);
+        }
+        return returnUserList;
     }
 }
