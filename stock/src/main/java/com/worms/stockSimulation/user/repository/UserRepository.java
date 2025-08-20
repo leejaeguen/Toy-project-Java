@@ -67,4 +67,11 @@ public class UserRepository {
         }
         return returnUserList;
     }
+
+    public User findUserBy(String userId) {
+        for (User user: userList){
+            return user;
+        }
+        return null;
+    }
 }

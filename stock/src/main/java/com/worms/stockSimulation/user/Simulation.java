@@ -27,7 +27,7 @@ public class Simulation {
 
             switch (choice) {
                 case 1: us.findAllUsers();break;
-                case 2: break;
+                case 2: us.findUserBy(chooseUserId()); break;
                 case 3: break;
                 case 4: ss.findAllStocks();break;
                 case 5: break;
@@ -38,5 +38,11 @@ public class Simulation {
                     System.out.println("번호를 잘못 입력하셨습니다.");
             }
         }
+    }
+
+    private static String chooseUserId() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("찾으시려는 회원의 아이디를 입력해주세요: ");
+        return sc.nextLine();
     }
 }
