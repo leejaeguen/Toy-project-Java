@@ -7,7 +7,7 @@ import java.util.ArrayList;
 
 public class StockRepository {
     private final ArrayList<Stock> stockList = new ArrayList<>();
-    private File file = new File("stock/src/main/java/com/worms/stockSimulation/stock/db/stock.txt");
+    private File file = new File("stock/src/main/java/com/worms/stockSimulation/stock/db/stockDB.dat");
 
     public StockRepository() {
         if (!file.exists()) {
@@ -55,5 +55,13 @@ public class StockRepository {
             throw new RuntimeException(e);
         }
 
+    }
+
+    public ArrayList<Stock> findAllStocks() {
+        ArrayList<Stock> returnStockList = new ArrayList<>();
+        for (Stock stock : stockList) {
+            returnStockList.add(stock);
+        }
+        return returnStockList;
     }
 }

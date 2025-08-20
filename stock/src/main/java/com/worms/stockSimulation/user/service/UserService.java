@@ -12,9 +12,9 @@ public class UserService {
     public void findAllUsers() {
         ArrayList<User> result = new ArrayList<>();
         result = ur.findAllUsers();
-        if (result != null) {
+        if (!result.isEmpty()) {
             for (User user : result) {
-                System.out.println("User: " + user);
+                System.out.println(user);
             }
         } else {
             System.out.println("등록된 유저가 없습니다.");
