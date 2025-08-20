@@ -1,15 +1,14 @@
-package stockSimulation.user.repository;
+package com.worms.stockSimulation.user.repository;
 
-import stockSimulation.user.aggregate.User;
+import com.worms.stockSimulation.user.aggregate.User;
 
-import javax.imageio.IIOException;
 import java.io.*;
 import java.util.ArrayList;
 
 public class userRepository {
 
     private final ArrayList<User> userList = new ArrayList<>();
-    private File file = new File("src/main/java/stockSimulation/user/db/user.txt");
+    private File file = new File("stock/src/main/java/com/worms/stockSimulation/user/db/user.txt");
 
     public userRepository() {
         if (!file.exists()) {

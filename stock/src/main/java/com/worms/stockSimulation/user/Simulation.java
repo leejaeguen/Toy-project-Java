@@ -1,12 +1,14 @@
-package stockSimulation.user;
+package com.worms.stockSimulation.user;
 
-import stockSimulation.user.service.userService;
+import com.worms.stockSimulation.stock.service.stockService;
+import com.worms.stockSimulation.user.service.userService;
 
 import java.util.Scanner;
 
 public class Simulation {
 
     private static final userService us = new userService();
+    private static final stockService st = new stockService();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
