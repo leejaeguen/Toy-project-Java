@@ -1,4 +1,4 @@
-package stock.aggregate;
+package stockSimulation.stock.aggregate;
 
 public class Stock {
     private String stockName;
