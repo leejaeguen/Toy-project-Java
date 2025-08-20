@@ -55,11 +55,9 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "회원정보 {" +
-                "회원아이디='" + id + '\'' +
+        return "회원아이디='" + id + '\'' +
                 ", 보유금액=" + holdingMoney +
                 ", 보유주식=" + holdingStock +
-                ", 거래 진행중인 주식=" + stockInTrading +
-                '}';
+                ", 거래 진행중인 주식=" + stockInTrading;
     }
 }

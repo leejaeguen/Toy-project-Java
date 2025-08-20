@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class UserRepository {
 
     private final ArrayList<User> userList = new ArrayList<>();
-    private final File file = new File("stock/src/main/java/com/worms/stockSimulation/user/db/user.txt");
+    private final File file = new File("stock/src/main/java/com/worms/stockSimulation/user/db/userDB.dat");
 
     public UserRepository() {
         if (!file.exists()) {

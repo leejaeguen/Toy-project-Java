@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Simulation {
 
     private static final UserService us = new UserService();
-    private static final StockService st = new StockService();
+    private static final StockService ss = new StockService();
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -29,7 +29,7 @@ public class Simulation {
                 case 1: us.findAllUsers();break;
                 case 2: break;
                 case 3: break;
-                case 4: break;
+                case 4: ss.findAllStocks();break;
                 case 5: break;
                 case 9:
                     System.out.println("프로그램을 종료하겠습니다!");

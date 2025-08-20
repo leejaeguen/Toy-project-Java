@@ -54,11 +54,10 @@ public class Stock implements Serializable {
 
     @Override
     public String toString() {
-        return "Stock{" +
-                "stockName='" + stockName + '\'' +
-                ", stockPrice=" + stockPrice +
-                ", minStockPrice=" + minStockPrice +
-                ", maxStockPrice=" + maxStockPrice +
-                '}';
+        return
+                "주식이름='" + stockName + '\'' +
+                ", 주식가격=" + stockPrice +
+                ", 최소매도가격=" + minStockPrice +
+                ", 최대매수가격=" + maxStockPrice;
     }
 }
