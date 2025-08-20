@@ -1,4 +1,4 @@
-package stockSimulation.stock.aggregate;
+package com.worms.stockSimulation.stock.aggregate;
 
 public class Stock {
     private String stockName;

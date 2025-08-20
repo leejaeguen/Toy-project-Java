@@ -1,4 +1,4 @@
-package stockSimulation.user.aggregate;
+package com.worms.stockSimulation.user.aggregate;
 
 import java.util.ArrayList;
 import java.util.List;
