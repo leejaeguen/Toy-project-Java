@@ -7,7 +7,7 @@ import java.util.function.Function;
 public class Ex03 {
     public static void main(String[] args) {
 
-        /* 수업목표. 표준 함수적 인터페이스 중 하나인 Function에 대해 ㅣㅇ해하고 사용할 수 있다. */
+        /* 수업목표. 표준 함수적 인터페이스 중 하나인 Function에 대해 이해하고 사용할 수 있다. */
         Function<String, Integer> function = str -> Integer.valueOf(str);
         String str = "123456";
         System.out.println(function.apply(str));
