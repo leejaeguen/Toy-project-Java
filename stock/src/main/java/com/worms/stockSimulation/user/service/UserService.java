@@ -29,4 +29,22 @@ public class UserService {
             System.out.println("아이디가 " + userId + "인 회원을 찾을 수 없습니다.");
         }
     }
+
+    public User findUserForTraiding(String userId) {
+        User selectedUser = ur.findUserBy(userId);
+
+        User copyUser = null;
+
+        if (selectedUser != null) {
+            copyUser = new User();
+            copyUser.setId(selectedUser.getId());
+            copyUser.setHoldingMoney(selectedUser.getHoldingMoney());
+
+            copyUser.setHoldingStock(new ArrayList<>(selectedUser.getHoldingStock()));
+            copyUser.setStockInTrading(new ArrayList<>(selectedUser.getStockInTrading()));
+        } else {
+            System.out.println("회원이 존재하지 않습니다.");
+        }
+        return copyUser;
+    }
 }

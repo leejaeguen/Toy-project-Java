@@ -20,4 +20,20 @@ public class StockService {
             System.out.println("등록된 주식을 찾을 수 없습니다.");
         }
     }
+
+    public Stock findStockForTrading(String stockName) {
+        Stock selectedStock = sr.findStockBy(stockName);
+
+        Stock copyStock = null;
+        if (selectedStock != null) {
+            copyStock = new Stock();
+            copyStock.setStockName(selectedStock.getStockName());
+            copyStock.setStockPrice(selectedStock.getStockPrice());
+            copyStock.setMaxStockPrice(selectedStock.getMaxStockPrice());
+            copyStock.setMinStockPrice(selectedStock.getMinStockPrice());
+        } else {
+            System.out.println("해당 이름의 주식을 찾을 수 없습니다.");
+        }
+        return copyStock;
+    }
 }

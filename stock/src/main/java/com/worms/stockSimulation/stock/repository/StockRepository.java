@@ -64,4 +64,11 @@ public class StockRepository {
         }
         return returnStockList;
     }
+
+    public Stock findStockBy(String stockName) {
+        for (Stock stock : stockList) {
+            return stock;
+        }
+        return null;
+    }
 }
